@@ -1,12 +1,21 @@
 package com.example.kavvka.web.service;
 
-import org.springframework.stereotype.Service;
+import com.example.kavvka.configuration.KafkaConfiguration;
+import com.example.kavvka.producer.KafkaEventProducer;
 
-@Service
 public class MessageService
 {
+	private final KafkaConfiguration kafkaConfiguration;
+	private final KafkaEventProducer kafkaEventProducer;
+
+	MessageService(final KafkaConfiguration kafkaConfiguration, final KafkaEventProducer kafkaEventProducer)
+	{
+		this.kafkaConfiguration = kafkaConfiguration;
+		this.kafkaEventProducer = kafkaEventProducer;
+	}
+
 	public void postMessage()
 	{
-
+		
 	}
 }

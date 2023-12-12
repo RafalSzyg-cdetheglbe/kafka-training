@@ -6,7 +6,9 @@ import java.util.Map;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class KafkaConfiguration
 {
 	private static final String DEFAULT_KAFKA_HOST = "localhost:9092";
